@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: Logic class created">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" afterDir="false" />
+    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/FileHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/TUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657805221225</updated>
       <workItem from="1657805222543" duration="115000" />
-      <workItem from="1657805349859" duration="3085000" />
+      <workItem from="1657805349859" duration="6258000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1657805391671</created>
@@ -71,7 +71,28 @@
       <option name="project" value="LOCAL" />
       <updated>1657808095548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Bacteria &amp; Board classes created&#10;&#10;Bacteria -&gt; alive, willSurvive, neighbourCount&#10;Board -&gt; size, board">
+      <created>1657809220436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657809220437</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(Bacteria): added xCoord, yCoord to store coordinates">
+      <created>1657810612389</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657810612389</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board">
+      <created>1657811790757</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657811790757</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +112,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat: Logic class created" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Logic class created" />
+    <MESSAGE value="feat: Bacteria &amp; Board classes created&#10;&#10;Bacteria -&gt; alive, willSurvive, neighbourCount&#10;Board -&gt; size, board" />
+    <MESSAGE value="feat(Bacteria): added xCoord, yCoord to store coordinates" />
+    <MESSAGE value="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board" />
   </component>
 </project>
