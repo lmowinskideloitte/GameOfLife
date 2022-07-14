@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: FileHandler, Game, TUI classes added">
+    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: multiple changes among Game, Bacteria, Board classes&#10;&#10;feat(Game): nextGeneration &amp; constructor added&#10;feat(Bacteria): evolve added&#10;feat(Board): getSize, getBacteria, getGenCount, incGenCount, constructor added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657805221225</updated>
       <workItem from="1657805222543" duration="115000" />
-      <workItem from="1657805349859" duration="7630000" />
+      <workItem from="1657805349859" duration="10761000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1657805391671</created>
@@ -99,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657812307396</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: multiple changes among Game, Bacteria, Board classes&#10;&#10;feat(Game): nextGeneration &amp; constructor added&#10;feat(Bacteria): evolve added&#10;feat(Board): getSize, getBacteria, getGenCount, incGenCount, constructor added">
+      <created>1657813822030</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657813822030</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +130,7 @@
     <MESSAGE value="feat(Bacteria): added xCoord, yCoord to store coordinates" />
     <MESSAGE value="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board" />
     <MESSAGE value="feat: FileHandler, Game, TUI classes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: FileHandler, Game, TUI classes added" />
+    <MESSAGE value="feat: multiple changes among Game, Bacteria, Board classes&#10;&#10;feat(Game): nextGeneration &amp; constructor added&#10;feat(Bacteria): evolve added&#10;feat(Board): getSize, getBacteria, getGenCount, incGenCount, constructor added" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: multiple changes among Game, Bacteria, Board classes&#10;&#10;feat(Game): nextGeneration &amp; constructor added&#10;feat(Bacteria): evolve added&#10;feat(Board): getSize, getBacteria, getGenCount, incGenCount, constructor added" />
   </component>
 </project>

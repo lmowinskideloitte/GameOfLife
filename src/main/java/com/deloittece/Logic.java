@@ -9,14 +9,11 @@ public class Logic {
         return count;
     }
 
-    public static boolean doesBacteriaSurvive(Board board, Bacteria bacteria) {
-        Bacteria[] neighbours = board.getNeighbours(bacteria);
-        int neighboursAlive = countAlive(neighbours);
-
+    public static boolean doesBacteriaSurvive(int neighboursAlive, boolean isAlive) {
         if (neighboursAlive > 3) {
             return false;
         } else if (neighboursAlive == 3) {
             return true;
-        } else return neighboursAlive == 2 && bacteria.isAlive();
+        } else return neighboursAlive == 2 && isAlive;
     }
 }
