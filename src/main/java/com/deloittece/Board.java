@@ -1,8 +1,28 @@
 package com.deloittece;
 
 public class Board {
-    private int size;
-    private Bacteria[][] board;
+    private final int size;
+    protected Bacteria[][] board;
+    private int generationCount;
+
+    Board(int size) {
+        this.size = size;
+        this.board = new Bacteria[size][size];
+    }
+    protected int getSize() {
+        return this.size;
+    }
+
+    protected Bacteria getBacteria(int x, int y) {
+        return this.board[x][y];
+    }
+    protected int getGenerationCount(){
+        return this.generationCount;
+    }
+
+    protected void incrementGenerationCount(){
+        this.generationCount++;
+    }
 
     protected Bacteria[] getNeighbours(Bacteria bacteria) {
         int x = bacteria.getXCoord();

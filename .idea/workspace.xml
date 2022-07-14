@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/TUI.java" afterDir="false" />
+    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: FileHandler, Game, TUI classes added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657805221225</updated>
       <workItem from="1657805222543" duration="115000" />
-      <workItem from="1657805349859" duration="6258000" />
+      <workItem from="1657805349859" duration="7630000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1657805391671</created>
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657811790757</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: FileHandler, Game, TUI classes added">
+      <created>1657812307396</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657812307396</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +122,7 @@
     <MESSAGE value="feat: Bacteria &amp; Board classes created&#10;&#10;Bacteria -&gt; alive, willSurvive, neighbourCount&#10;Board -&gt; size, board" />
     <MESSAGE value="feat(Bacteria): added xCoord, yCoord to store coordinates" />
     <MESSAGE value="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: moved getNeighbours, getNeighbourByCoors from Logic to Board" />
+    <MESSAGE value="feat: FileHandler, Game, TUI classes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: FileHandler, Game, TUI classes added" />
   </component>
 </project>

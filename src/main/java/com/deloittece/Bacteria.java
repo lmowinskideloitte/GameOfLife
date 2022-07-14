@@ -18,4 +18,9 @@ public class Bacteria {
     protected int getYCoord() {
         return this.yCoord;
     }
+
+    protected void evolve() {
+        this.alive = this.willSurvive;
+        this.willSurvive = false;
+    }
 }
