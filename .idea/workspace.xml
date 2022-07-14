@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" afterDir="false" />
+    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: Logic class created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657805221225</updated>
       <workItem from="1657805222543" duration="115000" />
-      <workItem from="1657805349859" duration="2083000" />
+      <workItem from="1657805349859" duration="3085000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1657805391671</created>
@@ -62,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657805391671</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Logic class created">
+      <created>1657808095548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657808095548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="feat: Logic class created" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Logic class created" />
   </component>
 </project>
