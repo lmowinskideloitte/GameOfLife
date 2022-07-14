@@ -1,16 +1,16 @@
 package com.deloittece;
 
 public class Logic {
-    public static Bacteria[] getNeighbours(Bacteria bacteria) {
-        ;
-    }
-
     public static int countAlive(Bacteria[] bacteriaArr) {
-
+        var count = 0;
+        for (Bacteria bacteria : bacteriaArr) {
+            count += bacteria.isAlive() ? 1 : 0;
+        }
+        return count;
     }
 
-    public static boolean doesBacteriaSurvive(Bacteria bacteria) {
-        Bacteria[] neighbours = getNeighbours(bacteria);
+    public static boolean doesBacteriaSurvive(Board board, Bacteria bacteria) {
+        Bacteria[] neighbours = board.getNeighbours(bacteria);
         int neighboursAlive = countAlive(neighbours);
 
         if (neighboursAlive > 3) {
