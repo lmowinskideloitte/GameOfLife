@@ -75,4 +75,30 @@ public class UserInput {
         }
         return coord;
     }
+
+    protected int getUsersWill() {
+        Scanner scan = new Scanner(System.in);
+        int will = 0;
+        boolean inputCorrect = false;
+
+        while (!inputCorrect) {
+            try {
+                System.out.print("""
+                                Do you want to change some bacteria again?
+                                1. Yes
+                                2. No
+                                Input: """);
+                will = scan.nextInt();
+                if (will == 1 || will == 2) {
+                    inputCorrect = true;
+                } else {
+                    System.out.println("Incorrect number! Input should be 1 or 2!");
+                }
+            } catch (InputMismatchException e) {
+                String wrongInput = scan.next();
+                System.out.println(wrongInput + " is a wrong input! Input only integer numbers please...");
+            }
+        }
+        return will;
+    }
 }
