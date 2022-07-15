@@ -18,33 +18,36 @@ public class Menu {
         //gets size from user and creates new object newBoard
         size = newUser.getSizeFromUser();
 
+        // create file and generate random bacterias
         FileHandler fileHandler = new FileHandler();
-        // TODO musze to ogarnac bo on normalnie generuje nowy plik, ale z opoznieniem i jak przechodzi do 26 linijki to pokazuje ze nie ma pliku
-        //fileHandler.generateRandomLiveBacterias(size);
+        fileHandler.generateRandomLiveBacterias(size);
+
+        // create new board and bacterias objects
         Board newBoard = new Board(size);
-
         int[][] aliveBacterias = fileHandler.getLiveBacteriasCords(size);
-
         for (int i = 0; i < aliveBacterias.length; i++) {
-            newBoard.getBacteria(aliveBacterias[i][0], aliveBacterias[i][1]).setAlive();
+            newBoard.getBacteria(aliveBacterias[i][0], aliveBacterias[i][1]).setAlive(true);
         }
 
-        //TO DO: here it will show board from current file
+        // show board from current file
         PrintBoard newPrintBoard = new PrintBoard(newBoard);
-        newPrintBoard.showBoard(newBoard);
+        showBoard(newPrintBoard, newBoard);
 
 
         //gets respond what user wants to do
-        //chooseOption(newUser, newBoard);
+        chooseOption(newUser, newBoard, newPrintBoard);
     }
 
+    private void showBoard(PrintBoard newPrintBoard, Board newBoard) {
+        newPrintBoard.showBoard(newBoard);
+    }
     private void welcome() {
         System.out.println("""
                 ----------------------------------------
                 Welcome to the Game Of Life!""");
     }
 
-    private void chooseOption(UserInput newUser) {
+    private void chooseOption(UserInput newUser, Board newBoard, PrintBoard printBoard) {
         System.out.println("""
                 1. Upload new file
                 2. Change current living bacterias
@@ -57,12 +60,19 @@ public class Menu {
             case 1:
                 break;
             case 2:
+                changeBacteria(newBoard, newUser, printBoard);
                 break;
             case 3:
                 break;
         }
     }
 
+    private void changeBacteria(Board board, UserInput newUser, PrintBoard printBoard) {
+        int coord_x = newUser.getBacteriaCoordsFromUser(size, "X");
+        int coord_y = newUser.getBacteriaCoordsFromUser(size, "Y");
+        board.getBacteria(coord_x, coord_y).setAlive(false);
+        printBoard.showBoard(board);
+    }
     private void enterBacteria() {
 
     }

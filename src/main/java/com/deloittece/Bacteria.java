@@ -29,8 +29,8 @@ public class Bacteria {
         return this.alive;
     }
 
-    public void setAlive() {
-        this.alive = true;
+    public void setAlive(boolean set) {
+        this.alive = set;
     }
 
     protected int getNeighbourCount() {

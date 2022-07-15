@@ -24,7 +24,7 @@ public class FileHandler {
         FileWriter fwriter = new FileWriter(file, false);
         BufferedWriter bwriter = new BufferedWriter(fwriter);
 
-        int howManyNumbers = new Random().nextInt(size*size);
+        int howManyNumbers = new Random().nextInt(size*size/2);
         for (int i = 0; i < howManyNumbers; i++) {
             bwriter.write(new Random().nextInt(size) + "," + new Random().nextInt(size) + "\n");
         }
@@ -33,7 +33,7 @@ public class FileHandler {
     }
 
     //zwraca fileboarda
-    protected int[][] getLiveBacteriasCords(int size) {
+    protected int[][] getLiveBacteriasCords(int size) throws IOException{
         String[] content;
         int[][] cor = new int[size*size][2];
 
@@ -58,9 +58,4 @@ public class FileHandler {
     }
 
     //zmienia jedna komorke
-    protected void modifyLifeBacterias(int x, int y) {
-
-    }
-
-
 }
