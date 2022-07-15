@@ -1,14 +1,16 @@
 package com.deloittece.tui;
 
-public class Board {
+import com.deloittece.Board;
+
+public class PrintBoard {
 
     private int size;
 
-    public Board(int size) {
-        this.size = size;
+    public PrintBoard(Board board) {
+        this.size = board.getSize();
     }
 
-    protected void showBoard() {
+    protected void showBoard(Board board) {
         String brdStr;
         String lines = "";
 
@@ -20,8 +22,8 @@ public class Board {
         for (int row = 0; row < size; row++) {
             brdStr = "";
             for (int col = 0; col < size; col++) {
-                brdStr += " .";
-                // tu bedzie obiekt bakteria(row, col).show()
+                if (board.getBacteria(row, col).isAlive()) { brdStr += " 0"; }
+                else {brdStr += " ."; }
             }
             System.out.println(brdStr);
         }

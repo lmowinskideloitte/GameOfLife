@@ -9,7 +9,7 @@ public class Bacteria {
     private final int xCoord;
     private final int yCoord;
 
-    protected Bacteria (boolean alive, int xCoord, int yCoord) {
+    public Bacteria (boolean alive, int xCoord, int yCoord) {
         this.alive = alive;
         this.willSurvive = false;
         this.neighbourCount = 0;
@@ -25,8 +25,12 @@ public class Bacteria {
 
         this.alive = new Random().nextInt(100) < randomAliveThreshold;
     }
-    protected boolean isAlive() {
+    public boolean isAlive() {
         return this.alive;
+    }
+
+    public void setAlive() {
+        this.alive = true;
     }
 
     protected int getNeighbourCount() {
