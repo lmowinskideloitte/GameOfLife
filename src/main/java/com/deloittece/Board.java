@@ -54,4 +54,11 @@ public class Board {
         return this.board[x][y];
     }
 
+    protected void randomPopulate(int threshold) {
+        for (int i = 0; i < this.size; i++) {
+            for (int j = 0; j < this.size; j++) {
+                this.board[i][j] = new Bacteria(i, j, threshold);
+            }
+        }
+    }
 }

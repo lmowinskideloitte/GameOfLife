@@ -1,5 +1,7 @@
 package com.deloittece;
 
+import java.util.Random;
+
 public class Bacteria {
     private boolean alive;
     private boolean willSurvive;
@@ -16,9 +18,12 @@ public class Bacteria {
     }
 
     Bacteria (int xCoord, int yCoord, int randomAliveThreshold){
-        //TODO finish random constructor
         this.xCoord = xCoord;
         this.yCoord = yCoord;
+        this.willSurvive = false;
+        this.neighbourCount = 0;
+
+        this.alive = new Random().nextInt(100) < randomAliveThreshold;
     }
     protected boolean isAlive() {
         return this.alive;
