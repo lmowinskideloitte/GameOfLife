@@ -39,4 +39,8 @@ public class Game {
         updateWillSurviveAll();
         evolveAll();
     }
+
+    private void flipAliveByCoords(int x, int y) {
+        this.board.getBacteria(x, y).reverseAlive();
+    }
 }

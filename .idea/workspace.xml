@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat: randomPopulate added&#10;&#10;populate based on the % given as &quot;threshold&quot;">
+    <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="fix: changed some methods from protected to public">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657805221225</updated>
       <workItem from="1657805222543" duration="115000" />
-      <workItem from="1657805349859" duration="13340000" />
+      <workItem from="1657805349859" duration="15488000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1657805391671</created>
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657871736325</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix: changed some methods from protected to public">
+      <created>1657872245259</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657872245259</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +173,7 @@
     <MESSAGE value="feat: multiple changes among Game, Bacteria, Board classes&#10;&#10;feat(Game): nextGeneration &amp; constructor added&#10;feat(Bacteria): evolve added&#10;feat(Board): getSize, getBacteria, getGenCount, incGenCount, constructor added" />
     <MESSAGE value="feat: multiple changes among Game, Bacteria, Logic classes&#10;&#10;feat(Game): changed nextGeneration name -&gt; evolveAll, added updateAliveNeighboursAll, updateWillSurviveAll, nextGeneration now includes all three steps (neighbours -&gt; willSurvive -&gt; evolve)&#10;&#10;feat(Bacteria): two new constructors, getNeighbourCount, setNeighbourCount, updateWillSurvive&#10;&#10;feat(Logic): remade doesBacteriaSurvive, pure logic, no Bacteria object needed." />
     <MESSAGE value="feat: randomPopulate added&#10;&#10;populate based on the % given as &quot;threshold&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: randomPopulate added&#10;&#10;populate based on the % given as &quot;threshold&quot;" />
+    <MESSAGE value="fix: changed some methods from protected to public" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: changed some methods from protected to public" />
   </component>
 </project>

@@ -50,4 +50,8 @@ public class Bacteria {
     protected void updateWillSurvive() {
         this.willSurvive = Logic.doesBacteriaSurvive(this.neighbourCount, this.alive);
     }
+
+    protected void reverseAlive() {
+        this.alive = !this.alive;
+    }
 }
