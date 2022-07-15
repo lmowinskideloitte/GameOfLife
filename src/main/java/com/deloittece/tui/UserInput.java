@@ -101,4 +101,22 @@ public class UserInput {
         }
         return will;
     }
+
+    protected String inputFile() {
+        Scanner scan = new Scanner(System.in);
+        String input = "";
+        boolean inputCorrect = false;
+
+        while (!inputCorrect) {
+            try {
+                System.out.print("Enter new file path: ");
+                input = scan.nextLine();
+                inputCorrect = true;
+            } catch (InputMismatchException e) {
+                String wrongInput = scan.next();
+                System.out.println(wrongInput + " is a wrong input! Input only integer numbers please...");
+            }
+        }
+        return input;
+    }
 }

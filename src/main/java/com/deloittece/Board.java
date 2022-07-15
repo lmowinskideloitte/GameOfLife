@@ -8,12 +8,15 @@ public class Board {
     public Board(int size) {
         this.size = size;
         this.board = new Bacteria[size][size];
+        boardClear();
+    }
+
+    public void boardClear() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++){
                 board[i][j] = new Bacteria(false, i, j);
             }
         }
-
     }
     public int getSize() {
         return this.size;

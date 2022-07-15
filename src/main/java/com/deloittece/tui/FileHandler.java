@@ -12,8 +12,9 @@ import java.util.Random;
 // Handles read/writes to populate/save the state of the board
 public class FileHandler {
 
+    private String file_path = "./LiveBacterias.txt";
     protected void generateRandomLiveBacterias(int size) throws IOException {
-        File file = new File("./LiveBacterias.txt");
+        File file = new File(file_path);
         if(!file.exists()) {
             try {
                 file.createNewFile();
@@ -38,7 +39,7 @@ public class FileHandler {
         int[][] cor = new int[size*size][2];
 
         try {
-            File file = new File("./LiveBacterias.txt");
+            File file = new File(file_path);
             FileReader freader = new FileReader(file);
             BufferedReader breader = new BufferedReader(freader);
             String line;
@@ -57,5 +58,10 @@ public class FileHandler {
         return cor;
     }
 
-    //zmienia jedna komorke
+    protected void changeFilePath(String path) {
+        File file = new File(path);
+
+        if(!file.exists()) { System.out.println("This file does not exist!"); }
+        else { this.file_path = path; }
+    }
 }

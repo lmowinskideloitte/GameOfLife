@@ -35,7 +35,7 @@ public class Menu {
 
 
         //gets respond what user wants to do
-        chooseOption(newUser, newBoard, newPrintBoard);
+        chooseOption(newUser, newBoard, newPrintBoard, fileHandler);
     }
 
     private void showBoard(PrintBoard newPrintBoard, Board newBoard) {
@@ -47,7 +47,7 @@ public class Menu {
                 Welcome to the Game Of Life!""");
     }
 
-    private void chooseOption(UserInput newUser, Board newBoard, PrintBoard printBoard) {
+    private void chooseOption(UserInput newUser, Board newBoard, PrintBoard printBoard, FileHandler fileHandler) {
         System.out.println("""
                 1. Upload new file
                 2. Change current living bacterias
@@ -58,11 +58,30 @@ public class Menu {
 
         switch(option){
             case 1:
-                break;
+                try {
+                    fileHandler.changeFilePath(newUser.inputFile());
+                    try {
+                        Board temp = newBoard;
+                        newBoard.boardClear();
+
+                        int[][] aliveBacterias = fileHandler.getLiveBacteriasCords(size);
+                        for (int i = 0; i < aliveBacterias.length; i++) {
+                            newBoard.getBacteria(aliveBacterias[i][0], aliveBacterias[i][1]).setAlive(true);
+                        }
+
+                        showBoard(printBoard, newBoard);
+                    } catch (Exception e) {
+                        System.out.println("Something went wrong! Changing file to default");
+                        fileHandler.changeFilePath("./LiveBacterias.txt");
+                    }
+                    break;
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             case 2:
                 changeBacteria(newBoard, newUser, printBoard);
                 showBoard(printBoard, newBoard);
-                chooseOption(newUser, newBoard, printBoard);
+                chooseOption(newUser, newBoard, printBoard, fileHandler);
                 break;
             case 3:
                 break;
