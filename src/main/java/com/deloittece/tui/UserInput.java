@@ -63,7 +63,7 @@ public class UserInput {
             try {
                 System.out.print("Enter " + whichCoord + " coordinate of the bacteria: ");
                 coord = scan.nextInt();
-                if (coord > 0 && coord < size) {
+                if (coord >= 0 && coord < size) {
                     inputCorrect = true;
                 } else {
                     System.out.println("Incorrect number! Coordinate should be between 0 and " + (size-1));

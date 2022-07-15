@@ -61,6 +61,7 @@ public class Menu {
                 break;
             case 2:
                 changeBacteria(newBoard, newUser, printBoard);
+                chooseOption(newUser, newBoard, printBoard);
                 break;
             case 3:
                 break;
@@ -70,7 +71,10 @@ public class Menu {
     private void changeBacteria(Board board, UserInput newUser, PrintBoard printBoard) {
         int coord_x = newUser.getBacteriaCoordsFromUser(size, "X");
         int coord_y = newUser.getBacteriaCoordsFromUser(size, "Y");
-        board.getBacteria(coord_x, coord_y).setAlive(false);
+
+        if (board.getBacteria(coord_x, coord_y).isAlive()) { board.getBacteria(coord_x, coord_y).setAlive(false); }
+        else { board.getBacteria(coord_x, coord_y).setAlive(true); }
+
         printBoard.showBoard(board);
     }
     private void enterBacteria() {
