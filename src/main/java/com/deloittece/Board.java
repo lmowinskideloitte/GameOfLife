@@ -5,7 +5,7 @@ public class Board {
     protected Bacteria[][] board;
     private int generationCount;
 
-    Board(int size) {
+    public Board(int size) {
         this.size = size;
         this.board = new Bacteria[size][size];
     }
@@ -54,7 +54,7 @@ public class Board {
         return this.board[x][y];
     }
 
-    protected void randomPopulate(int threshold) {
+    public void randomPopulate(int threshold) {
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
                 this.board[i][j] = new Bacteria(i, j, threshold);

@@ -9,7 +9,7 @@ public class Bacteria {
     private final int xCoord;
     private final int yCoord;
 
-    Bacteria (boolean alive, int xCoord, int yCoord) {
+    protected Bacteria (boolean alive, int xCoord, int yCoord) {
         this.alive = alive;
         this.willSurvive = false;
         this.neighbourCount = 0;
@@ -17,7 +17,7 @@ public class Bacteria {
         this.yCoord = yCoord;
     }
 
-    Bacteria (int xCoord, int yCoord, int randomAliveThreshold){
+    protected Bacteria (int xCoord, int yCoord, int randomAliveThreshold){
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.willSurvive = false;

@@ -3,7 +3,7 @@ package com.deloittece;
 public class Game {
     private Board board;
 
-    Game (Board board) {
+    public Game (Board board) {
         this.board = board;
     }
     private void updateWillSurviveAll() {
@@ -32,7 +32,7 @@ public class Game {
         this.board.incrementGenerationCount();
     }
 
-    protected void nextGeneration() {
+    public void nextGeneration() {
         updateAliveNeighboursAll();
         // in theory this step can be omitted as survival only depends on aliveNeighbourCount
         // but let's just do one more looping to future-proof ourselves for the logic-change
