@@ -2,9 +2,7 @@ package com.deloittece.tui;
 
 import com.deloittece.Board;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Random;
+import java.util.*;
 import java.io.*;
 import java.util.Random;
 
@@ -34,28 +32,29 @@ public class FileHandler {
     }
 
     //zwraca fileboarda
-    protected int[][] getLiveBacteriasCords(int size) throws IOException{
+    protected List<List<Integer>> getLiveBacteriasCords(int size) throws IOException{
         String[] content;
-        int[][] cor = new int[size*size][2];
+        List<List<Integer>> listOfCords = new ArrayList<>();
+        List<Integer> cords = new ArrayList<>();
 
         try {
             File file = new File(file_path);
             FileReader freader = new FileReader(file);
             BufferedReader breader = new BufferedReader(freader);
             String line;
-            int i = 0;
 
             while ((line = breader.readLine()) != null) {
                 content = line.split(",");
-                cor[i][0] = Integer.parseInt(content[0]);
-                cor[i][1] = Integer.parseInt(content[1]);
-                i++;
+                cords.add(Integer.parseInt(content[0]));
+                cords.add(Integer.parseInt(content[1]));
+                listOfCords.add(new ArrayList<>(cords));
+                cords.clear();
             }
         } catch (IOException e) {
             System.err.println("Database file doesn't exist!");
             e.printStackTrace();
         }
-        return cor;
+        return listOfCords;
     }
 
     protected void changeFilePath(String path) {

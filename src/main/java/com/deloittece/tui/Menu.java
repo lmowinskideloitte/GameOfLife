@@ -3,6 +3,7 @@ package com.deloittece.tui;
 import com.deloittece.Board;
 
 import java.io.IOException;
+import java.util.List;
 
 public class Menu {
     private int size = 0;
@@ -24,9 +25,9 @@ public class Menu {
 
         // create new board and bacterias objects
         Board newBoard = new Board(size);
-        int[][] aliveBacterias = fileHandler.getLiveBacteriasCords(size);
-        for (int i = 0; i < aliveBacterias.length; i++) {
-            newBoard.getBacteria(aliveBacterias[i][0], aliveBacterias[i][1]).setAlive(true);
+        List<List<Integer>> aliveBacterias = fileHandler.getLiveBacteriasCords(size);
+        for (int i = 0; i < aliveBacterias.size(); i++) {
+            newBoard.getBacteria(aliveBacterias.get(i).get(0), aliveBacterias.get(i).get(1)).setAlive(true);
         }
 
         // show board from current file
@@ -58,26 +59,25 @@ public class Menu {
 
         switch(option){
             case 1:
+                fileHandler.changeFilePath(newUser.inputFile());
+                Board temp = new Board(newBoard.getSize());
                 try {
-                    fileHandler.changeFilePath(newUser.inputFile());
-                    try {
-                        Board temp = newBoard;
-                        newBoard.boardClear();
+                    newBoard.boardClear();
 
-                        int[][] aliveBacterias = fileHandler.getLiveBacteriasCords(size);
-                        for (int i = 0; i < aliveBacterias.length; i++) {
-                            newBoard.getBacteria(aliveBacterias[i][0], aliveBacterias[i][1]).setAlive(true);
-                        }
-
-                        showBoard(printBoard, newBoard);
-                    } catch (Exception e) {
-                        System.out.println("Something went wrong! Changing file to default");
-                        fileHandler.changeFilePath("./LiveBacterias.txt");
+                    List<List<Integer>> aliveBacterias = fileHandler.getLiveBacteriasCords(size);
+                    for (int i = 0; i < aliveBacterias.size(); i++) {
+                        newBoard.getBacteria(aliveBacterias.get(i).get(0), aliveBacterias.get(i).get(1)).setAlive(true);
                     }
-                    break;
                 } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
+                    System.out.println("Something went wrong!\nChanging file to default");
+                    fileHandler.changeFilePath("./LiveBacterias.txt");
+                    //newBoard = temp;
+                } finally {
+                    System.out.println("----------------------------------------");
+                    showBoard(printBoard, newBoard);
+                    chooseOption(newUser, newBoard, printBoard, fileHandler);
+                 }
+                break;
             case 2:
                 changeBacteria(newBoard, newUser, printBoard);
                 showBoard(printBoard, newBoard);
