@@ -8,6 +8,7 @@ public class Bacteria {
     private int neighbourCount;
     private final int xCoord;
     private final int yCoord;
+    private boolean previousState;
 
     public Bacteria (boolean alive, int xCoord, int yCoord) {
         this.alive = alive;
@@ -28,6 +29,9 @@ public class Bacteria {
     public boolean isAlive() {
         return this.alive;
     }
+    public boolean getPreviousState(){
+        return this.previousState;
+    }
     protected int getNeighbourCount() {
         return this.neighbourCount;
     }
@@ -43,6 +47,7 @@ public class Bacteria {
     }
 
     protected void evolve() {
+        this.previousState = this.alive;
         this.alive = this.willSurvive;
         this.willSurvive = false;
     }

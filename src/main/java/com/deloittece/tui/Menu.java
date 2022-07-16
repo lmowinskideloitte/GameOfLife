@@ -1,9 +1,12 @@
 package com.deloittece.tui;
 
 import com.deloittece.Board;
+import com.deloittece.Game;
 
 import java.io.IOException;
 import java.util.List;
+import java.lang.Thread;
+import java.util.Scanner;
 
 public class Menu {
     private int size = 0;
@@ -11,7 +14,8 @@ public class Menu {
     private UserInput newUser = new UserInput();
     private FileHandler newFileHandler = new FileHandler();
     private Board newBoard;
-    private PrintBoard newPrintBoard;
+    private PrintBoard newPrintBoard = new PrintBoard();
+    private Game newGame;
 
 
     public void start() throws IOException {
@@ -23,7 +27,6 @@ public class Menu {
         generateNewBoard();
 
         // show board from current file
-        newPrintBoard = new PrintBoard(newBoard);
         showBoard();
 
         //shows menu and gets respond what user wants to do
@@ -42,7 +45,7 @@ public class Menu {
                 2. Change current living bacterias
                 3. Save current file
                 4. Generate new board
-                TODO 5. Play!
+                5. Play!
                 6. Exit""");
         int option = this.newUser.getOptionFromUser();
 
@@ -57,6 +60,7 @@ public class Menu {
             case 2:
                 // user changes bacteria states from current file
                 changeBacteria();
+                System.out.println("----------------------------------------");
                 showBoard();
                 chooseOption();
             case 3:
@@ -68,14 +72,32 @@ public class Menu {
             case 4:
                 // generates new board from user's size
                 generateNewBoard();
+                System.out.println("----------------------------------------");
                 showBoard();
                 chooseOption();
 
             case 5:
-                break;
+                this.newGame = new Game(this.newBoard);
+                try {
+                    while (true) {
+                        playGame();
+                        Thread.sleep(200);
+                    }
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                //chooseOption();
             case 6:
                 System.exit(0);
         }
+    }
+
+    // starts the game
+    private void playGame() {
+        // how to stop this loop
+        //Scanner scan = new Scanner(System.in);
+        this.newGame.nextGeneration();
+        showBoard();
     }
 
     // generates new board and file from user's size
@@ -100,10 +122,10 @@ public class Menu {
     }
 
     // gets file path from user and sets current file_path to user's
-    // enters user's file and gets living bacterias coords
-    // checks if user's living bacteria coords are correct (should be >= 0 and < size)
-    // if are not correct, prints error and changes file_path to previous
-    // if are correct, sets living bacterias to board
+    // 1. enters user's file and gets living bacterias coords
+    // 2. checks if user's living bacteria coords are correct (should be >= 0 and < size):
+    //      if are not correct, prints error and changes file_path to previous
+    //      if are correct, sets living bacterias to board
     private void uploadNewFile() {
         this.newFileHandler.changeFilePath(this.newUser.inputFile());
         boolean isCorrect = true;

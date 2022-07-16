@@ -38,6 +38,17 @@ public class Game {
         // but let's just do one more looping to future-proof ourselves for the logic-change
         updateWillSurviveAll();
         evolveAll();
+        if(isFinal()) { System.exit(0); }
+    }
+
+    private boolean isFinal(){
+        int sameAsPrevious = 0;
+        for (int i = 0; i < this.board.getSize(); i++) {
+            for (int j = 0; j < this.board.getSize(); j++) {
+                if(this.board.getBacteria(i, j).getPreviousState() == this.board.getBacteria(i, j).isAlive()) { sameAsPrevious++; };
+            }
+        };
+        return sameAsPrevious == this.board.getSize()*this.board.getSize();
     }
 
     private void flipAliveByCoords(int x, int y) {

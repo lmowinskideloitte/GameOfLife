@@ -6,12 +6,9 @@ public class PrintBoard {
 
     private int size;
 
-    public PrintBoard(Board board) {
-        this.size = board.getSize();
-    }
-
     // prints current board
     protected void showBoard(Board board) {
+        this.size = board.getSize();
         String brdStr;
         String lines = "";
 
