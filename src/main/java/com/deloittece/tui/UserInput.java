@@ -5,11 +5,7 @@ import java.util.Scanner;
 
 public class UserInput {
 
-
-    public UserInput() {
-
-    }
-
+    // choose option from menu
     protected int getOptionFromUser() {
         Scanner scan = new Scanner(System.in);
         int input = 0;
@@ -19,7 +15,7 @@ public class UserInput {
             try {
                 System.out.print("Enter option: ");
                 input = scan.nextInt();
-                if (input == 1 || input == 2 || input == 3) {
+                if (input >= 1 && input <= 6) {
                     inputCorrect = true;
                 } else {
                     System.out.println("Incorrect number!");
@@ -32,6 +28,7 @@ public class UserInput {
         return input;
     }
 
+    // input new board size
     protected int getSizeFromUser() {
         Scanner scan = new Scanner(System.in);
         int size = 0;
@@ -44,7 +41,7 @@ public class UserInput {
                 if (size > 0) {
                     inputCorrect = true;
                 } else {
-                    System.out.println("Incorrect number! Size should be >0");
+                    System.out.println("Incorrect number! Size should be > 0");
                 }
             } catch (InputMismatchException e) {
                 String wrongInput = scan.next();
@@ -54,6 +51,7 @@ public class UserInput {
         return size;
     }
 
+    // input bacteria coords to changes it's state
     protected int getBacteriaCoordsFromUser(int size, String whichCoord) {
         Scanner scan = new Scanner(System.in);
         int coord = 0;
@@ -76,6 +74,7 @@ public class UserInput {
         return coord;
     }
 
+    // asks if user wants to change some more bacterias or not
     protected int getUsersWill() {
         Scanner scan = new Scanner(System.in);
         int will = 0;
@@ -102,6 +101,7 @@ public class UserInput {
         return will;
     }
 
+    // input user's path of his file with living bacterias coords
     protected String inputFile() {
         Scanner scan = new Scanner(System.in);
         String input = "";
@@ -114,7 +114,7 @@ public class UserInput {
                 inputCorrect = true;
             } catch (InputMismatchException e) {
                 String wrongInput = scan.next();
-                System.out.println(wrongInput + " is a wrong input! Input only integer numbers please...");
+                System.out.println(wrongInput + " is a wrong input!");
             }
         }
         return input;

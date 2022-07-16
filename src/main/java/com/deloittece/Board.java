@@ -25,6 +25,7 @@ public class Board {
     public Bacteria getBacteria(int x, int y) {
         return this.board[x][y];
     }
+
     protected int getGenerationCount(){
         return this.generationCount;
     }

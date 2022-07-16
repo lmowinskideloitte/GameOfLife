@@ -28,11 +28,6 @@ public class Bacteria {
     public boolean isAlive() {
         return this.alive;
     }
-
-    public void setAlive(boolean set) {
-        this.alive = set;
-    }
-
     protected int getNeighbourCount() {
         return this.neighbourCount;
     }
@@ -55,7 +50,7 @@ public class Bacteria {
         this.willSurvive = Logic.doesBacteriaSurvive(this.neighbourCount, this.alive);
     }
 
-    protected void reverseAlive() {
+    public void reverseAlive() {
         this.alive = !this.alive;
     }
 }
