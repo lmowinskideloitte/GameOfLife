@@ -22,6 +22,7 @@ public class Size extends JFrame implements ActionListener {
         setSize(500, 100);
         setResizable(false);
         setLocationRelativeTo(null);
+        setVisible(true);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -58,7 +59,7 @@ public class Size extends JFrame implements ActionListener {
         Object source = arg0.getSource();
         if (source == enterSize) {
             try {
-                this.sizeInt = Integer.parseInt(userSize.getText());
+                sizeInt = Integer.parseInt(userSize.getText());
                 if (sizeInt < 2) {
                     userSize.setText("VALUE SHOULD BE > 1");
                     System.err.println("VALUE SHOULD BE > 1");
@@ -69,8 +70,8 @@ public class Size extends JFrame implements ActionListener {
                 System.err.println("Enter integer value");
                 return;
             }
-            setVisible(false);
-            GuiMenu menu = new GuiMenu();
+            this.setVisible(false);
+            //System.out.println(sizeInt);
         }
     }
 }

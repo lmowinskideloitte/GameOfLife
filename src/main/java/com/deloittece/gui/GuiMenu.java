@@ -1,15 +1,15 @@
 package com.deloittece.gui;
 
 public class GuiMenu {
-    private Size userSize;
+    private Size userSize = new Size();
     private int size;
 
     private void getUserSize() {
-        userSize = new Size();
         userSize.setVisible(true);
-        if (!userSize.isVisible()) {
+        if (userSize.isVisible()) {
             size = userSize.getUserSize();
         }
+        System.out.println(size);
     }
 
     private void getBoard() {
@@ -17,7 +17,7 @@ public class GuiMenu {
         newPrintBoard.printBoard();
     }
     public void start() {
-        getUserSize();
+        //getUserSize();
         getBoard();
     }
 }
