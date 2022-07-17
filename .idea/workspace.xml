@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat(Game): added flipAliveByCoords">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/GuiMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/PrintBoardGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/Size.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LiveBacterias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LiveBacterias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/TuiMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +36,17 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2Bw7JBJ7gMIeWC5krQHPVuT5wSV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,9 +58,9 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.com.deloittece.Runner">
+  <component name="RunManager">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.deloittece.tui.Runner" />
+      <option name="MAIN_CLASS_NAME" value="com.deloittece.Runner" />
       <module name="GameOfLife" />
       <extension name="coverage">
         <pattern>
@@ -58,15 +72,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.deloittece.Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.deloittece.Runner" />
-      <module name="GameOfLife" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.deloittece.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,7 +86,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.deloittece.Runner" />
-        <item itemvalue="Application.Runner" />
       </list>
     </recent_temporary>
   </component>

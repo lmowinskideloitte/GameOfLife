@@ -6,9 +6,8 @@ import com.deloittece.Game;
 import java.io.IOException;
 import java.util.List;
 import java.lang.Thread;
-import java.util.Scanner;
 
-public class Menu {
+public class TuiMenu {
     private int size = 0;
     // tu mozna dac wszystkie obiekty typu UserInput newUser = new User() i odwolywac sie prosto z metod do tego
     private UserInput newUser = new UserInput();
