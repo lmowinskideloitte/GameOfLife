@@ -6,6 +6,11 @@ public class Game {
     public Game (Board board) {
         this.board = board;
     }
+
+    public Game (int size, int threshold) {
+        this.board = new Board(size);
+        this.board.randomPopulate(threshold);
+    }
     private void updateWillSurviveAll() {
         for (int i = 0; i < this.board.getSize(); i++) {
             for (int j = 0; j < this.board.getSize(); j++) {
@@ -45,9 +50,9 @@ public class Game {
         int sameAsPrevious = 0;
         for (int i = 0; i < this.board.getSize(); i++) {
             for (int j = 0; j < this.board.getSize(); j++) {
-                if(this.board.getBacteria(i, j).getPreviousState() == this.board.getBacteria(i, j).isAlive()) { sameAsPrevious++; };
+                if(this.board.getBacteria(i, j).getPreviousState() == this.board.getBacteria(i, j).isAlive()) { sameAsPrevious++; }
             }
-        };
+        }
         return sameAsPrevious == this.board.getSize()*this.board.getSize();
     }
 
