@@ -8,10 +8,10 @@ import java.io.IOException;
 
 public class Runner {
     public static void main(String[] args) throws IOException {
-        //TuiMenu menu = new TuiMenu();
-        //menu.start();
-
-        GuiMenu menu = new GuiMenu();
+        TuiMenu menu = new TuiMenu();
         menu.start();
+
+        //GuiMenu menu = new GuiMenu();
+        //menu.start();
     }
 }

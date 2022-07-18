@@ -14,7 +14,7 @@ public class FileHandler {
     private int size;
 
     // generates new file(user size) and new random living bacterias coords
-    protected void generateRandomLiveBacterias(int size) throws IOException {
+    public void generateRandomLiveBacterias(int size) throws IOException {
         File file = new File(file_path);
         if(!file.exists()) {
             try {

@@ -8,7 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/GuiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/GuiMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/PrintBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/PrintBoardGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/Size.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/FileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
