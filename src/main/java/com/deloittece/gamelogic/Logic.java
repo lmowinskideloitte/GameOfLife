@@ -1,4 +1,4 @@
-package com.deloittece;
+package com.deloittece.gamelogic;
 
 public class Logic {
     public static int countAlive(Bacteria[] bacteriaArr) {

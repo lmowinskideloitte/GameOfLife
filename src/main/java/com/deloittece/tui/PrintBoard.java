@@ -1,6 +1,6 @@
 package com.deloittece.tui;
 
-import com.deloittece.Board;
+import com.deloittece.gamelogic.Board;
 
 public class PrintBoard {
 

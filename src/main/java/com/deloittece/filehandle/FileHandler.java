@@ -1,6 +1,4 @@
-package com.deloittece.tui;
-
-import com.deloittece.Board;
+package com.deloittece.filehandle;
 
 import java.util.*;
 import java.io.*;
@@ -35,7 +33,7 @@ public class FileHandler {
     }
 
     // return live bacterias coords (as a list) from current file
-    protected List<List<Integer>> getLiveBacteriasCords(int size) throws IOException{
+    public List<List<Integer>> getLiveBacteriasCords(int size) throws IOException{
         this.size = size;
         String[] content;
         List<List<Integer>> listOfCords = new ArrayList<>();
@@ -62,7 +60,7 @@ public class FileHandler {
     }
 
     // changes current file_path
-    protected void changeFilePath(String path) {
+    public void changeFilePath(String path) {
         File file = new File(path);
 
         if(!file.exists()) { System.out.println("This file does not exist!"); }
@@ -70,7 +68,7 @@ public class FileHandler {
     }
 
     // changes one bacteria state in file
-    protected void changeBacteriaInFile(int x_cord, int y_cord) {
+    public void changeBacteriaInFile(int x_cord, int y_cord) {
         boolean addNew = true;
         try {
             List<List<Integer>> listOfCords = getLiveBacteriasCords(this.size);
@@ -103,7 +101,7 @@ public class FileHandler {
     }
 
    // creates a copy of current file and saves it to the path which users gave
-    protected void saveFileInFilePath(String file_path) {
+    public void saveFileInFilePath(String file_path) {
         try {
             File file = new File(file_path);
             if(!file.exists()) {

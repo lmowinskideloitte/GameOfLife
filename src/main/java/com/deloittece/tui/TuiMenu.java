@@ -1,7 +1,8 @@
 package com.deloittece.tui;
 
-import com.deloittece.Board;
-import com.deloittece.Game;
+import com.deloittece.gamelogic.Board;
+import com.deloittece.gamelogic.Game;
+import com.deloittece.filehandle.FileHandler;
 
 import java.io.IOException;
 import java.util.List;

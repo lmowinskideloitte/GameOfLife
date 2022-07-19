@@ -1,6 +1,7 @@
 package com.deloittece.gui;
 
-import com.deloittece.tui.FileHandler;
+import com.deloittece.gamelogic.Board;
+import com.deloittece.filehandle.FileHandler;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -15,9 +16,10 @@ public class PrintBoardGUI extends JFrame {
     private Color colorWhite = Color.WHITE;
     private int size = 16;
     private FileHandler newFileHandler = new FileHandler();
+    private Board newBoard;
 
-    public PrintBoardGUI(int size) {
-        this.size = size;
+    public PrintBoardGUI(Board newBoard) {
+        this.size = newBoard.getSize();
         squares = new JButton[size][size];
         this.setLayout(new BorderLayout());
         setSize(500, 500);
@@ -29,11 +31,12 @@ public class PrintBoardGUI extends JFrame {
         //newFileHandler.generateRandomLiveBacterias(size);
 
         Menu();
-        printBoard();
+        printBoard(newBoard);
         startButton();
     }
 
-    private void printBoard() {
+    private void printBoard(Board board) {
+
         contents.setLayout(new GridLayout(size, size));
 
         ButtonHandler buttonHandler = new ButtonHandler();
@@ -41,7 +44,8 @@ public class PrintBoardGUI extends JFrame {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 squares[i][j] = new JButton();
-                squares[i][j].setBackground(colorWhite);
+                if (board.getBacteria(i, j).isAlive()) { squares[i][j].setBackground(colorBlack); }
+                else { squares[i][j].setBackground(colorBlack); }
                 contents.add(squares[i][j]);
                 squares[i][j].addActionListener(buttonHandler);
             }
@@ -97,6 +101,7 @@ public class PrintBoardGUI extends JFrame {
         } else {
             squares[i][j].setBackground(colorWhite);
         }
+        this.newBoard.getBacteria(i, j).reverseAlive();
     }
 
     private class ButtonHandler implements ActionListener {

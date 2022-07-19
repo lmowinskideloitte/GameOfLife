@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f7b8b063-b154-4ad6-b9b4-a0183e6f17c2" name="Changes" comment="feat(Game): added flipAliveByCoords">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LiveBacterias.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LiveBacterias.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Bacteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gamelogic/Bacteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gamelogic/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gamelogic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gamelogic/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/GuiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/GuiMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/PrintBoardGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/gui/PrintBoardGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/filehandle/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/PrintBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/PrintBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/TuiMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deloittece/tui/TuiMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +64,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.deloittece.Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.deloittece.Runner" />
       <module name="GameOfLife" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.deloittece.tui.*" />
+          <option name="PATTERN" value="com.deloittece.filehandle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

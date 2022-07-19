@@ -1,4 +1,4 @@
-package com.deloittece;
+package com.deloittece.gamelogic;
 
 public class Board {
     private final int size;

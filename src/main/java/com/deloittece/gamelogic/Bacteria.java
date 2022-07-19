@@ -1,4 +1,4 @@
-package com.deloittece;
+package com.deloittece.gamelogic;
 
 import java.util.Random;
 

@@ -11,6 +11,7 @@ public class Runner {
         TuiMenu menu = new TuiMenu();
         menu.start();
 
+        // not done yet
         //GuiMenu menu = new GuiMenu();
         //menu.start();
     }

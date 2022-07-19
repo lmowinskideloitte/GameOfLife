@@ -1,4 +1,4 @@
-package com.deloittece;
+package com.deloittece.gamelogic;
 
 public class Game {
     private Board board;
@@ -43,7 +43,10 @@ public class Game {
         // but let's just do one more looping to future-proof ourselves for the logic-change
         updateWillSurviveAll();
         evolveAll();
-        if(isFinal()) { System.exit(0); }
+        if(isFinal()) {
+            System.out.print("Game ended!");
+            System.exit(0);
+        }
     }
 
     private boolean isFinal(){
